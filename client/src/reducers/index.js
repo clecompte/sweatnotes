@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
+import { reducer as reduxForm } from 'redux-form';
 import authReducer from './authReducer';
+import exercisesReducer from './exercisesReducer';
 
 export default combineReducers({
-  auth: authReducer
+  auth: authReducer,
+  form: reduxForm,
+  exercises: exercisesReducer
 })
