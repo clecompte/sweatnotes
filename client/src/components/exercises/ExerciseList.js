@@ -11,7 +11,7 @@ class ExerciseList extends Component {
     return this.props.exercises.map(exercise => {
       return (
         <div key={exercise._id}>
-          {exercise.exercise_name}
+          {exercise.exerciseName}
         </div>
       );
     })

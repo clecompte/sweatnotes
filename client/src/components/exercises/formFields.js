@@ -1,6 +1,11 @@
-export default [
-  { label: "Exercise Name", name: "exercise_name" },
-  { label: "Exercise Type", name: "exercise_type" },
-  { label: "Quantity Unit", name: "quantity_unit" },
-  { label: "Exertion Unit", name: "exertion_unit" }
+export const exerciseFields = [
+  { label: "Exercise Name", name: "exerciseName" },
+  { label: "Exercise Type", name: "exerciseType" },
+  { label: "Quantity Unit", name: "quantityUnit" },
+  { label: "Exertion Unit", name: "exertionUnit" }
+];
+
+export const setFields = [
+  { label: "Quantity", name: "quantity" },
+  { label: "Exertion", name: "exertion" }
 ];

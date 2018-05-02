@@ -1,12 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
-import formFields from './formFields';
+import { exerciseFields } from './formFields';
 import { withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 
 const ExerciseFormReview = ({ onCancel, formValues, submitExercise, history }) => {
-  const reviewFields = _.map(formFields, ({ name, label }) => {
+  const reviewExerciseFields = _.map(exerciseFields, ({ name, label }) => {
     return (
       <div key={name}>
         <label>{label}</label>
@@ -20,7 +20,16 @@ const ExerciseFormReview = ({ onCancel, formValues, submitExercise, history }) =
   return (
     <div>
       <h5>Please confirm your entries</h5>
-      {reviewFields}
+      {reviewExerciseFields}
+
+      {formValues.sets.map((set, index) => (
+        <div key={index}>
+          Quantity: {set.quantity}
+          Exertion: {set.exertion}
+          <br />
+        </div>
+      ))}
+
       <button onClick={onCancel}>
         Back
       </button>

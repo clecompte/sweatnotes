@@ -10,15 +10,15 @@ module.exports = app => {
     res.send(exercises);
   });
 
-  app.post('/api/exercises', requireLogin, async (req, res) => {
-    const { exercise_name, exercise_type, quantity_unit, exertion_unit } = req.body;
+  app.post('/api/exercises', async (req, res) => {
+    const { exerciseName, exerciseType, quantityUnit, exertionUnit, sets } = req.body;
 
     const exercise = new Exercise({
-      exercise_name,
-      exercise_type,
-      quantity_unit,
-      exertion_unit,
-      //set,
+      exerciseName,
+      exerciseType,
+      quantityUnit,
+      exertionUnit,
+      sets: sets.map(set => ({ quantity: set.quantity, exertion: set.exertion })),
       _user: req.user.id,
       dateModified: Date.now()
     });
