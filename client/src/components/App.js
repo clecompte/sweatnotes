@@ -5,7 +5,9 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Landing from './Landing';
+import Exercises from './exercises/Exercises';
 import ExerciseNew from './exercises/ExerciseNew';
+import ExercisesAll from './exercises/ExercisesAll';
 import Dashboard from './Dashboard';
 
 class App extends Component {
@@ -20,8 +22,9 @@ class App extends Component {
           <div className="container">
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route exact path="/exercises" component={Dashboard} />
+            <Route exact path="/exercises" component={Exercises} />
             <Route path="/exercises/new" component={ExerciseNew} />
+            <Route exact path="/exercises/all" component={ExercisesAll} />
           </div>
         </BrowserRouter>
       </div>
