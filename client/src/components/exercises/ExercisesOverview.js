@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchExercises, duplicateExercise } from '../../actions';
+import { fetchExercises, duplicateExercise, deleteExercise } from '../../actions';
 
-class Exercises extends Component {
+class ExercisesOverview extends Component {
   componentDidMount() {
     this.props.fetchExercises();
   }
@@ -14,7 +14,12 @@ class Exercises extends Component {
         <ul key={exercise._id}>
           <h4>Exercise</h4>
           <button onClick={() => this.props.duplicateExercise(exercise._id)}>Duplicate</button>
-          <li>Exercise Name: {exercise.exerciseName}</li>
+          <button onClick={() => this.props.deleteExercise(exercise._id)}>Delete</button>
+          <li>
+            <Link to={`/exercise/${exercise._id}`}>
+              Exercise Name: {exercise.exerciseName}
+            </Link>
+          </li>
           <li>Exercise Type: {exercise.exerciseType}</li>
         </ul>
       );
@@ -42,4 +47,4 @@ function mapStateToProps({ exercises }) {
   return { exercises };
 }
 
-export default connect(mapStateToProps, { fetchExercises, duplicateExercise })(Exercises);
+export default connect(mapStateToProps, { fetchExercises, duplicateExercise, deleteExercise })(ExercisesOverview);

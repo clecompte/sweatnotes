@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USER, FETCH_EXERCISES, UPDATE_EXERCISE, DELETE_EXERCISE, DUPLICATE_EXERCISE } from './types';
+import { FETCH_USER, FETCH_EXERCISES, VIEW_EXERCISE, UPDATE_EXERCISE, DELETE_EXERCISE, DUPLICATE_EXERCISE } from './types';
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get('/api/current_user');
@@ -16,8 +16,12 @@ export const submitExercise = (values, history) => async dispatch => {
 
 export const fetchExercises = () => async dispatch => {
   const res = await axios.get('/api/exercises');
-
   dispatch({ type: FETCH_EXERCISES, payload: res.data });
+}
+
+export const viewExercise = (id) => async dispatch => {
+  const res = await axios.get(`/api/exercise/${id}`);
+  dispatch({ type: VIEW_EXERCISE, payload: res.data });
 }
 
 export const updateSet = (direction, exercise, set, exerciseId, setId) => async dispatch => {

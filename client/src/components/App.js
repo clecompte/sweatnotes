@@ -5,10 +5,10 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Landing from './Landing';
-import Exercises from './exercises/Exercises';
+import ExercisesOverview from './exercises/ExercisesOverview';
 import ExerciseNew from './exercises/ExerciseNew';
 import ExercisesAll from './exercises/ExercisesAll';
-import Dashboard from './Dashboard';
+import ExerciseView from './exercises/ExerciseView';
 
 class App extends Component {
   componentDidMount() {
@@ -22,9 +22,10 @@ class App extends Component {
           <div className="container">
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route exact path="/exercises" component={Exercises} />
+            <Route exact path="/exercises" component={ExercisesOverview} />
             <Route path="/exercises/new" component={ExerciseNew} />
             <Route exact path="/exercises/all" component={ExercisesAll} />
+            <Route exact path="/exercise/:id" component={ExerciseView} />
           </div>
         </BrowserRouter>
       </div>

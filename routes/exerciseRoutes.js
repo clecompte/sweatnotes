@@ -4,10 +4,18 @@ const Exercise = mongoose.model('exercises');
 
 module.exports = app => {
   app.get('/api/exercises', requireLogin, async (req, res) => {
-    let exercises = await Exercise.find({ _user: req.user.id });
-    
     try {
+      let exercises = await Exercise.find({ _user: req.user.id });
       res.send(exercises);
+    } catch (err) {
+      res.status(422).send(err);
+    }
+  });
+
+  app.get('/api/exercise/:id', async (req, res) => {
+    try {
+      let exercise = await Exercise.find({ _id: req.params.id });
+      res.send(exercise);
     } catch (err) {
       res.status(422).send(err);
     }
@@ -71,6 +79,7 @@ module.exports = app => {
       exercise._id = mongoose.Types.ObjectId();
       duplicateExercise = new Exercise(exercise.toObject());
       duplicateExercise.save();
+      res.send(duplicateExercise);
     } catch (err) {
       res.status(422).send(err);
     }

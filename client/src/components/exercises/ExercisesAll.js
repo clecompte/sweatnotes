@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchExercises, updateSet, deleteExercise } from '../../actions';
+import { fetchExercises, deleteExercise } from '../../actions';
+import SetList from './SetList';
 
 class ExercisesAll extends Component {
   componentDidMount() {
@@ -14,24 +15,15 @@ class ExercisesAll extends Component {
         <ul key={exercise._id}>
           <h4>Exercise</h4>
           <button onClick={() => this.props.deleteExercise(exercise._id)}>Delete</button>
-          <li>Exercise Name: {exercise.exerciseName}</li>
+          <li>
+            <Link to={`/exercise/${exercise._id}`}>
+              Exercise Name: {exercise.exerciseName}
+            </Link>
+          </li>
           <li>Exercise Type: {exercise.exerciseType}</li>
-          <h5><strong>Sets</strong></h5>
-          {exercise.sets.map((set, setId) =>
-            set === null ? '' : (
-              <div key={setId}>
-                <hr />
-                <h6><strong>Set #{setId}</strong></h6>
-                <p>
-                  <strong>Quantity:</strong> {set.quantity} {exercise.quantityUnit}
-                  <button onClick={() => this.props.updateSet('increase', exercise, set, exerciseId, setId)}>Increase</button>
-                  <button onClick={() => this.props.updateSet('decrease', exercise, set, exerciseId, setId)}>Decrease</button>
-                </p>
-                <p><strong>Exertion:</strong> {set.exertion} {exercise.exertionUnit}</p>
-              </div>
-            )
-          )}
+          <SetList exercise={exercise} exerciseId={exerciseId} />
 
+      
         </ul>
       );
     })
@@ -54,4 +46,4 @@ function mapStateToProps({ exercises }) {
   return { exercises };
 }
 
-export default connect(mapStateToProps, { fetchExercises, updateSet, deleteExercise })(ExercisesAll);
+export default connect(mapStateToProps, { fetchExercises, deleteExercise })(ExercisesAll);
