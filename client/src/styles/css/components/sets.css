@@ -2,7 +2,7 @@
 Error: Undefined variable: "$color-gray-30".
         on line 7 of src/styles/scss/components/sets.scss
 
-2:   margin-top: 50px;
+2:   margin-bottom: 50px;
 3: }
 4: 
 5: .set {
@@ -73,4 +73,4 @@ src/styles/scss/components/sets.scss:7
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-gray-30\".\A         on line 7 of src/styles/scss/components/sets.scss\A \A 2:   margin-top: 50px;\A 3: }\A 4: \A 5: .set {\A 6:   align-items: center;\A 7:   border: 3px solid $color-gray-30;\A 8:   border-radius: 5px;\A 9:   display: flex;\A 10:   flex-direction: row;\A 11:   justify-content: space-between;\A 12:   margin: 50px auto;"; }
+  content: "Error: Undefined variable: \"$color-gray-30\".\A         on line 7 of src/styles/scss/components/sets.scss\A \A 2:   margin-bottom: 50px;\A 3: }\A 4: \A 5: .set {\A 6:   align-items: center;\A 7:   border: 3px solid $color-gray-30;\A 8:   border-radius: 5px;\A 9:   display: flex;\A 10:   flex-direction: row;\A 11:   justify-content: space-between;\A 12:   margin: 50px auto;"; }

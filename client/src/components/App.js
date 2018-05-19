@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
+import Footer from './Footer';
 import Landing from './Landing';
 import ExercisesOverview from './exercises/ExercisesOverview';
 import ExerciseNew from './exercises/ExerciseNew';
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/exercises/new" component={ExerciseNew} />
           <Route exact path="/exercises/all" component={ExercisesAll} />
           <Route exact path="/exercise/:id" component={ExerciseView} />
+          <Footer />
         </div>
       </BrowserRouter>
     );

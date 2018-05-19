@@ -21,12 +21,16 @@ nav.nav {
 
     @media screen and (max-width: $screen-xs-max) {
       height: 20px;
-      margin-bottom: 4px;
+      margin-bottom: 0;
     }
   }
 }
 
 .nav-wrapper-links {
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: 4px;
+  }
+  
   & > li > a {
     font-size: 1.1em;
     font-weight: 500;
@@ -35,6 +39,11 @@ nav.nav {
     @media screen and (max-width: $screen-xs-max) {
       font-size: 14px;
       padding: 0 10px;
+    }
+
+    &:hover {
+      color: $color-blue-dark;
+      background: none;
     }
   }
 }

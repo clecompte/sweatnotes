@@ -57,11 +57,15 @@ h1 {
   font-weight: 600;
   margin: 0;
   padding: 30px;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
   @media screen and (max-width: 991px) {
     h1 {
       font-size: 1.8em;
       padding: 20px 10px; } }
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 1.4em; } }
 
 h3 {
   border-bottom: 1px solid #e0e0e0;
@@ -113,8 +117,11 @@ nav.nav {
   @media screen and (max-width: 767px) {
     .nav-wrapper-logo img {
       height: 20px;
-      margin-bottom: 4px; } }
+      margin-bottom: 0; } }
 
+@media screen and (max-width: 767px) {
+  .nav-wrapper-links {
+    margin-top: 4px; } }
 .nav-wrapper-links > li > a {
   font-size: 1.1em;
   font-weight: 500;
@@ -123,6 +130,9 @@ nav.nav {
     .nav-wrapper-links > li > a {
       font-size: 14px;
       padding: 0 10px; } }
+  .nav-wrapper-links > li > a:hover {
+    color: #173753;
+    background: none; }
 
 .btn-group {
   display: flex;
@@ -150,9 +160,9 @@ nav.nav {
     background: #095127; }
 
 .btn-neutral {
-  background: #3b6064; }
+  background: #173753; }
   .btn-neutral:hover {
-    background: #1f3234; }
+    background: #060f17; }
 
 .btn-mute {
   background: #b3b3b3; }
@@ -192,6 +202,10 @@ nav.nav {
   @media screen and (max-width: 767px) {
     .exercises-box {
       padding: 30px; } }
+  .exercises-box .btn {
+    flex: 1;
+    padding-left: 0;
+    padding-right: 0; }
 
 .exercises-box-type {
   color: #000;
@@ -236,8 +250,8 @@ nav.nav {
   .exercises-box-name a {
     color: #000; }
 
-.set_title {
-  margin-top: 50px; }
+.c_sets {
+  margin-bottom: 50px; }
 
 .set {
   align-items: center;
@@ -252,10 +266,14 @@ nav.nav {
   text-align: center; }
   @media screen and (max-width: 767px) {
     .set {
-      border-radius: none;
+      border-radius: 0;
       border-width: 0 0 2px 0;
       margin: 0;
-      padding: 20px; } }
+      padding: 20px; }
+      .set:first-child {
+        padding-top: 10px; }
+      .set:last-child {
+        border: none; } }
   .set > button {
     border: none;
     height: 70px;
@@ -332,6 +350,39 @@ nav.nav {
 
 .review-set-number {
   font-weight: 600; }
+
+.footer {
+  border-top: 1px solid #ebebeb;
+  color: #999999;
+  font-size: .9em;
+  margin-top: 75px;
+  padding: 30px 0;
+  text-align: center; }
+
+.home-hero {
+  align-items: center;
+  background: #fbb13c;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    .home-hero {
+      padding: 20px; } }
+
+.home-hero-title {
+  color: #000;
+  box-shadow: none;
+  padding-top: 0; }
+
+.home-hero-text {
+  font-size: 1.4em;
+  line-height: 1.6em; }
+  @media screen and (max-width: 767px) {
+    .home-hero-text {
+      font-size: 1.2em; } }
 
 @media screen and (min-width: 768px) {
   .exercise-details {

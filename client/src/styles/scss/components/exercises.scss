@@ -23,6 +23,12 @@
   @media screen and (max-width: $screen-xs-max) {
     padding: 30px;
   }
+
+  .btn {
+    flex: 1;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .exercises-box-type {

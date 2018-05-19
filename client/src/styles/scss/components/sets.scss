@@ -1,5 +1,5 @@
-.set_title {
-  margin-top: 50px;
+.c_sets {
+  margin-bottom: 50px;
 }
 
 .set {
@@ -15,10 +15,18 @@
   text-align: center;
 
   @media screen and (max-width: $screen-xs-max) {
-    border-radius: none;
+    border-radius: 0;
     border-width: 0 0 2px 0;
     margin: 0;
     padding: 20px;
+
+    &:first-child {
+      padding-top: 10px;
+    }
+
+    &:last-child {
+      border: none;
+    }
   }
 
   > button {

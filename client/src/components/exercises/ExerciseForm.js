@@ -7,9 +7,6 @@ import { exerciseFields, setFields } from './formFields';
 
 const renderSets = ({ fields, meta: { touched, error } }) => (
   <div>
-    <button className="btn btn-neutral" type="button" onClick={() => fields.push({})}>
-      Add Set
-    </button>
     {touched && error && <span>{error}</span>}
 
     {fields.map((set, index) => (
@@ -23,6 +20,8 @@ const renderSets = ({ fields, meta: { touched, error } }) => (
         <button className="btn btn-mute" type="button" onClick={() => fields.remove(index)}>Remove Set</button>
       </div>
     ))}
+
+    <button className="btn btn-neutral" type="button" onClick={() => fields.push({})}>Add Set</button>
   </div>
 );
 

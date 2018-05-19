@@ -1,19 +1,22 @@
 /*
-Error: Undefined variable: "$color-orange".
-        on line 3 of src/styles/scss/pages/home.scss
+Error: Undefined variable: "$color-gray-20".
+        on line 2 of src/styles/scss/components/footer.scss
 
-1: .home-hero {
-2:   align-items: center;
-3:   background: $color-orange;
-4:   border-radius: 5px;
-5:   color: #fff;
-6:   display: flex;
-7:   flex-direction: column;
-8:   padding: 100px;
+1: .footer {
+2:   border-top: 1px solid $color-gray-20;
+3:   color: $color-gray-70;
+4:   font-size: .9em;
+5:   margin-top: 75px;
+6:   padding: 30px 0;
+7:   text-align: center;
 
 Backtrace:
-src/styles/scss/pages/home.scss:3
+src/styles/scss/components/footer.scss:2
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/list_literal.rb:75:in `map'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/list_literal.rb:75:in `_perform'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -66,4 +69,4 @@ src/styles/scss/pages/home.scss:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-orange\".\A         on line 3 of src/styles/scss/pages/home.scss\A \A 1: .home-hero {\A 2:   align-items: center;\A 3:   background: $color-orange;\A 4:   border-radius: 5px;\A 5:   color: #fff;\A 6:   display: flex;\A 7:   flex-direction: column;\A 8:   padding: 100px;"; }
+  content: "Error: Undefined variable: \"$color-gray-20\".\A         on line 2 of src/styles/scss/components/footer.scss\A \A 1: .footer {\A 2:   border-top: 1px solid $color-gray-20;\A 3:   color: $color-gray-70;\A 4:   font-size: .9em;\A 5:   margin-top: 75px;\A 6:   padding: 30px 0;\A 7:   text-align: center;"; }

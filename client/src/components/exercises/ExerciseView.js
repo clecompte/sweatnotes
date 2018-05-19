@@ -32,7 +32,9 @@ class ExerciseView extends Component {
           <h1>{exercise.exerciseName}</h1>
 
           <div className="container m_content">
+            <SetList exercise={exercise} exerciseId={exerciseId} />
 
+            <h3>Exercise Details</h3>
             <div className="exercise-details">
               <div className="exercise-details-name">
                 <span>Exercise Name</span>
@@ -67,8 +69,6 @@ class ExerciseView extends Component {
             {!this.state.showEditFields &&
               <button className="btn btn-neutral" onClick={() => this.setState({ showEditFields: true })}>Edit</button>
             }
-
-            <SetList exercise={exercise} exerciseId={exerciseId} />
           </div>
         </div>
       );

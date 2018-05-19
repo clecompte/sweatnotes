@@ -7,8 +7,7 @@ class SetList extends Component {
     const exercise = this.props.exercise.sets;
 
     return (
-      <div>
-        <h3 className="set_title"><strong>Sets</strong></h3>
+      <div className="c_sets">
         {exercise.map((set, setId) => set === null ? '' : (
           <div key={setId} className="set">
             <button className="set-increase" onClick={() => this.props.updateSet('increase', this.props.exercise, set, this.props.exerciseId, setId)}>Increase</button>
