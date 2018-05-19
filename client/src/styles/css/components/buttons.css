@@ -1,24 +1,28 @@
 /*
-Error: Undefined variable: "$color-gray-50".
-        on line 12 of src/styles/scss/components/buttons.scss
+Error: Undefined variable: "$screen-sm-max".
+        on line 6 of src/styles/scss/components/buttons.scss
 
-7:     margin-right: 8px;
+1: .btn-group {
+2:   display: flex;
+3:   flex-direction: row;
+4:   justify-content: space-between;
+5: 
+6:   @media screen and (max-width: $screen-sm-max) {
+7:     justify-content: center;
 8:   }
-9: }
-10: 
-11: .btn-neutral {
-12:   background: $color-gray-50;
-13: }
-14: 
-15: .btn-danger {
-16:   background: red;
-17: }
+9: 
+10:   &.m_inline {
+11:     justify-content: flex-start;
 
 Backtrace:
-src/styles/scss/components/buttons.scss:12
+src/styles/scss/components/buttons.scss:6
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:553:in `map'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:553:in `run_interp_no_strip'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:560:in `run_interp'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:525:in `visit_media'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
@@ -69,4 +73,4 @@ src/styles/scss/components/buttons.scss:12
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-gray-50\".\A         on line 12 of src/styles/scss/components/buttons.scss\A \A 7:     margin-right: 8px;\A 8:   }\A 9: }\A 10: \A 11: .btn-neutral {\A 12:   background: $color-gray-50;\A 13: }\A 14: \A 15: .btn-danger {\A 16:   background: red;\A 17: }"; }
+  content: "Error: Undefined variable: \"$screen-sm-max\".\A         on line 6 of src/styles/scss/components/buttons.scss\A \A 1: .btn-group {\A 2:   display: flex;\A 3:   flex-direction: row;\A 4:   justify-content: space-between;\A 5: \A 6:   @media screen and (max-width: $screen-sm-max) {\A 7:     justify-content: center;\A 8:   }\A 9: \A 10:   &.m_inline {\A 11:     justify-content: flex-start;"; }

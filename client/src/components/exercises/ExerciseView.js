@@ -30,34 +30,48 @@ class ExerciseView extends Component {
   renderExercise() {
     const getExercise = this.props.exercises.filter(exercise => exercise._id === this.props.match.params.id);
 
-    console.log(getExercise);
-
     return getExercise.map((exercise, exerciseId) => {
       return (
-        <div key={exercise._id}>
+        <div key={exercise._id} className="exercise">
           <h1>{exercise.exerciseName}</h1>
-          <button onClick={() => this.setState({ showEditFields: true })}>
-            Edit
-            </button>
-          <li>
-            Exercise Name: {this.state.showEditFields ? this.showField(exercise.exerciseName, 'newExerciseTitle') : exercise.exerciseName}
-          </li>
-          <li>
-            Exercise Type: {this.state.showEditFields ? this.showField(exercise.exerciseType, 'newExerciseType') : exercise.exerciseType}
-          </li>
-          {this.state.showEditFields &&
-            <button onClick={
-              () => this.props.editExercise(
-                exercise._id, (this.state.newExerciseTitle || exercise.exerciseName),
-                (this.state.newExerciseType || exercise.exerciseType),
-                () => this.setState({ showEditFields: false })
-              )
-            }>
-              Update
-            </button>
-          }
-          <h5><strong>Sets</strong></h5>
-          <SetList exercise={exercise} exerciseId={exerciseId} />
+
+          <div className="container m_content">
+
+            <div className="exercise-details">
+              <div className="exercise-details-name">
+                <span>Exercise Name</span>
+                {this.state.showEditFields ? this.showField(exercise.exerciseName, 'newExerciseTitle') : exercise.exerciseName}
+              </div>
+              <div className="exercise-details-type">
+                <span>Exercise Type</span>
+                {this.state.showEditFields ? this.showField(exercise.exerciseType, 'newExerciseType') : exercise.exerciseType}
+              </div>
+
+              <div className="btn-group m_inline">
+                {this.state.showEditFields &&
+                  <button
+                    className="btn btn-action"
+                    onClick={
+                      () => this.props.editExercise(
+                        exercise._id, (this.state.newExerciseTitle || exercise.exerciseName),
+                        (this.state.newExerciseType || exercise.exerciseType),
+                        () => this.setState({ showEditFields: false })
+                      )
+                    }
+                  >
+                    Update
+                  </button>
+                }
+                {!this.state.showEditFields &&
+                  <button className="btn btn-neutral" onClick={() => this.setState({ showEditFields: true })}>Edit</button>
+                }
+                <button className="btn btn-mute" onClick={() => this.setState({ showEditFields: false })}>Cancel</button>
+              </div>
+            </div>
+
+
+            <SetList exercise={exercise} exerciseId={exerciseId} />
+          </div>
         </div>
       );
     })
@@ -66,10 +80,8 @@ class ExerciseView extends Component {
   render() {
     return (
       <div>
-        <Link to="/exercises">
-          Go Back
-        </Link>
         {this.renderExercise()}
+        <Link to="/exercises" className="btn-back">Go Back</Link>
       </div>
     )
   }

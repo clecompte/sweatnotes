@@ -2,16 +2,51 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media screen and (max-width: $screen-sm-max) {
+    justify-content: center;
+  }
+
+  &.m_inline {
+    justify-content: flex-start;
+  }
   
   .btn:not(:last-child) {
     margin-right: 8px;
   }
 }
 
+.btn {
+  box-shadow: none;
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: .9em;
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+.btn-action {
+  background: $color-green;
+}
+
 .btn-neutral {
-  background: $color-gray-50;
+  background: $color-blue-dark;
+}
+
+.btn-mute {
+  background: $color-gray-60;
 }
 
 .btn-danger {
-  background: red;
+  background: $color-red;
+}
+
+.btn-back {
+  display: table;
+  margin: 50px auto;
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin: 30px auto;
+  }
 }

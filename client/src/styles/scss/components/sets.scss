@@ -1,0 +1,80 @@
+.set_title {
+  margin-top: 50px;
+}
+
+.set {
+  align-items: center;
+  border: 3px solid $color-gray-30;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 30px;
+  text-align: center;
+
+  @media screen and (max-width: $screen-xs-max) {
+    border-width: 0 0 2px 0;
+    margin: 0;
+    padding: 20px;
+  }
+
+  > button {
+    border: none;
+    height: 70px;
+    text-indent: -9999px;
+    width: 70px;
+
+    @media screen and (max-width: $screen-xs-max) {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+.set-increase {
+  background: url('../../img/icon-increase.svg') no-repeat center center / contain;
+}
+
+.set-decrease {
+  background: url('../../img/icon-decrease.svg') no-repeat center center / contain;
+}
+
+.set-details {
+  flex: 1;
+}
+
+.set-details-number {
+  font-size: 1.2em;
+  font-weight: 900;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 15px;
+  }
+}
+
+.set-details-quantity,
+.set-details-exertion {
+  color: $color-gray-80;
+  font-size: 1.2em;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 14px;
+  }
+
+  strong {
+    color: $color-blue;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+  }
+}
+
+.set-details-quantity {
+  margin-bottom: 20px;
+}

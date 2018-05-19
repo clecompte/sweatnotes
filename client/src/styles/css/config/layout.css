@@ -11,8 +11,8 @@ Error: Undefined variable: "$screen-lg".
 11:       max-width: 100%;
 12:       width: 80%;
 13:     }
-14:   }
-15: }
+14: 
+15:     @media screen and (max-width: $screen-md-max) {
 
 Backtrace:
 src/styles/scss/config/layout.scss:10
@@ -84,4 +84,4 @@ src/styles/scss/config/layout.scss:10
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$screen-lg\".\A         on line 10 of src/styles/scss/config/layout.scss\A \A 5: \A 6:   &.m_content {\A 7:     clear: both;\A 8:     margin: 40px auto;\A 9:     \A 10:     @media screen and (min-width: $screen-lg) {\A 11:       max-width: 100%;\A 12:       width: 80%;\A 13:     }\A 14:   }\A 15: }"; }
+  content: "Error: Undefined variable: \"$screen-lg\".\A         on line 10 of src/styles/scss/config/layout.scss\A \A 5: \A 6:   &.m_content {\A 7:     clear: both;\A 8:     margin: 40px auto;\A 9:     \A 10:     @media screen and (min-width: $screen-lg) {\A 11:       max-width: 100%;\A 12:       width: 80%;\A 13:     }\A 14: \A 15:     @media screen and (max-width: $screen-md-max) {"; }

@@ -1,9 +1,9 @@
 /*
-Error: Undefined variable: "$blue".
+Error: Undefined variable: "$color-blue".
         on line 2 of src/styles/scss/components/nav.scss
 
 1: nav.nav {
-2:   background: $blue;
+2:   background: $color-blue;
 3:   box-shadow: none;
 4:   height: auto;
 5:   line-height: auto;
@@ -65,4 +65,4 @@ src/styles/scss/components/nav.scss:2
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$blue\".\A         on line 2 of src/styles/scss/components/nav.scss\A \A 1: nav.nav {\A 2:   background: $blue;\A 3:   box-shadow: none;\A 4:   height: auto;\A 5:   line-height: auto;\A 6: }\A 7: "; }
+  content: "Error: Undefined variable: \"$color-blue\".\A         on line 2 of src/styles/scss/components/nav.scss\A \A 1: nav.nav {\A 2:   background: $color-blue;\A 3:   box-shadow: none;\A 4:   height: auto;\A 5:   line-height: auto;\A 6: }\A 7: "; }

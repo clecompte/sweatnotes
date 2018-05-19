@@ -1,0 +1,18 @@
+.exercise-details-name,
+.exercise-details-type {
+  margin-bottom: 30px;
+
+  span {
+    color: $color-blue;
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $screen-xs-max) {
+      font-size: 15px;
+    }
+  }
+}

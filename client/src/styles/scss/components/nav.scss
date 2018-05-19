@@ -1,5 +1,5 @@
 nav.nav {
-  background: $blue;
+  background: $color-blue;
   box-shadow: none;
   height: auto;
   line-height: auto;
@@ -13,18 +13,26 @@ nav.nav {
 }
 
 .nav-wrapper-logo {
-
   img {
     height: 40px;
     vertical-align: middle;
     width: auto;
+
+    @media screen and (max-width: $screen-xs-max) {
+      height: 20px;
+    }
   }
 }
 
 .nav-wrapper-links {
   & > li > a {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media screen and (max-width: $screen-xs-max) {
+      font-size: 14px;
+      padding: 0 10px;
+    }
   }
 }

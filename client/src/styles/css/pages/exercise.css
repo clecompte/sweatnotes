@@ -1,24 +1,35 @@
 /*
-Error: Undefined variable: "$color-gray-20".
-        on line 6 of src/styles/scss/config/typography.scss
+Error: Undefined variable: "$color-blue".
+        on line 6 of src/styles/scss/pages/exercise.scss
 
-1: body {
-2:   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-3: }
+1: .exercise-details-name,
+2: .exercise-details-type {
+3:   margin-bottom: 30px;
 4: 
-5: h1 {
-6:   background: $color-gray-20;
-7:   font-size: 3em;
-8:   font-weight: 600;
-9:   margin: 0;
-10:   padding: 50px 30px;
-11: 
+5:   span {
+6:     color: $color-blue;
+7:     display: block;
+8:     font-size: 1em;
+9:     font-weight: 600;
+10:     letter-spacing: 3px;
+11:     margin-bottom: 10px;
 
 Backtrace:
-src/styles/scss/config/typography.scss:6
+src/styles/scss/pages/exercise.scss:6
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
@@ -69,4 +80,4 @@ src/styles/scss/config/typography.scss:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-gray-20\".\A         on line 6 of src/styles/scss/config/typography.scss\A \A 1: body {\A 2:   font-family: 'Roboto', Arial, Helvetica, sans-serif;\A 3: }\A 4: \A 5: h1 {\A 6:   background: $color-gray-20;\A 7:   font-size: 3em;\A 8:   font-weight: 600;\A 9:   margin: 0;\A 10:   padding: 50px 30px;\A 11: "; }
+  content: "Error: Undefined variable: \"$color-blue\".\A         on line 6 of src/styles/scss/pages/exercise.scss\A \A 1: .exercise-details-name,\A 2: .exercise-details-type {\A 3:   margin-bottom: 30px;\A 4: \A 5:   span {\A 6:     color: $color-blue;\A 7:     display: block;\A 8:     font-size: 1em;\A 9:     font-weight: 600;\A 10:     letter-spacing: 3px;\A 11:     margin-bottom: 10px;"; }

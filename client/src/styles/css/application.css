@@ -57,6 +57,23 @@ h1 {
   font-weight: 600;
   margin: 0;
   padding: 50px 30px; }
+  @media screen and (max-width: 991px) {
+    h1 {
+      font-size: 1.8em;
+      padding: 20px 10px; } }
+  @media screen and (max-width: 767px) {
+    h1 {
+      text-align: center; } }
+
+h3 {
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding-bottom: 4px;
+  margin-bottom: 30px; }
+  @media screen and (max-width: 991px) {
+    h3 {
+      font-size: 1.2em; } }
 
 .container {
   margin: 0 auto;
@@ -69,6 +86,10 @@ h1 {
       .container.m_content {
         max-width: 100%;
         width: 80%; } }
+    @media screen and (max-width: 1199px) {
+      .container.m_content {
+        padding-left: 20px;
+        padding-right: 20px; } }
 
 nav.nav {
   background: #40809A;
@@ -86,24 +107,57 @@ nav.nav {
   height: 40px;
   vertical-align: middle;
   width: auto; }
+  @media screen and (max-width: 767px) {
+    .nav-wrapper-logo img {
+      height: 20px; } }
 
 .nav-wrapper-links > li > a {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 500;
   text-transform: uppercase; }
+  @media screen and (max-width: 767px) {
+    .nav-wrapper-links > li > a {
+      font-size: 14px;
+      padding: 0 10px; } }
 
 .btn-group {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
+  @media screen and (max-width: 991px) {
+    .btn-group {
+      justify-content: center; } }
+  .btn-group.m_inline {
+    justify-content: flex-start; }
   .btn-group .btn:not(:last-child) {
     margin-right: 8px; }
 
+.btn {
+  box-shadow: none; }
+  @media screen and (max-width: 767px) {
+    .btn {
+      font-size: .9em;
+      height: 32px;
+      line-height: 32px; } }
+
+.btn-action {
+  background: #109648; }
+
 .btn-neutral {
-  background: #ccc; }
+  background: #3b6064; }
+
+.btn-mute {
+  background: #b3b3b3; }
 
 .btn-danger {
-  background: red; }
+  background: #ac3931; }
+
+.btn-back {
+  display: table;
+  margin: 50px auto; }
+  @media screen and (max-width: 767px) {
+    .btn-back {
+      margin: 30px auto; } }
 
 .exercises {
   display: grid;
@@ -111,6 +165,12 @@ nav.nav {
   grid-row-gap: 30px;
   grid-template-columns: repeat(3, 31%);
   text-align: center; }
+  @media screen and (max-width: 991px) {
+    .exercises {
+      grid-template-columns: repeat(2, 48%); } }
+  @media screen and (max-width: 767px) {
+    .exercises {
+      grid-template-columns: repeat(1, 100%); } }
 
 .exercises-box {
   background: #fbb13c;
@@ -143,5 +203,89 @@ nav.nav {
   margin-bottom: 50px; }
   .exercises-box-name a {
     color: #fff; }
+
+.set_title {
+  margin-top: 50px; }
+
+.set {
+  align-items: center;
+  border: 3px solid #e0e0e0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 30px;
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    .set {
+      border-width: 0 0 2px 0;
+      margin: 0;
+      padding: 20px; } }
+  .set > button {
+    border: none;
+    height: 70px;
+    text-indent: -9999px;
+    width: 70px; }
+    @media screen and (max-width: 767px) {
+      .set > button {
+        height: 50px;
+        width: 50px; } }
+
+.set-increase {
+  background: url("../../img/icon-increase.svg") no-repeat center center/contain; }
+
+.set-decrease {
+  background: url("../../img/icon-decrease.svg") no-repeat center center/contain; }
+
+.set-details {
+  flex: 1; }
+
+.set-details-number {
+  font-size: 1.2em;
+  font-weight: 900;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 767px) {
+    .set-details-number {
+      font-size: 15px; } }
+
+.set-details-quantity,
+.set-details-exertion {
+  color: gray;
+  font-size: 1.2em;
+  text-transform: uppercase; }
+  @media screen and (max-width: 767px) {
+    .set-details-quantity,
+    .set-details-exertion {
+      font-size: 14px; } }
+  .set-details-quantity strong,
+  .set-details-exertion strong {
+    color: #40809A;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 5px; }
+
+.set-details-quantity {
+  margin-bottom: 20px; }
+
+.exercise-details-name,
+.exercise-details-type {
+  margin-bottom: 30px; }
+  .exercise-details-name span,
+  .exercise-details-type span {
+    color: #40809A;
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase; }
+    @media screen and (max-width: 767px) {
+      .exercise-details-name span,
+      .exercise-details-type span {
+        font-size: 15px; } }
 
 /*# sourceMappingURL=application.css.map */
