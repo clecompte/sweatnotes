@@ -52,18 +52,16 @@ body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif; }
 
 h1 {
-  background: #ebebeb;
-  font-size: 3em;
+  box-shadow: 0 6px 8px #e0e0e0;
+  font-size: 2em;
   font-weight: 600;
   margin: 0;
-  padding: 50px 30px; }
+  padding: 30px;
+  text-align: center; }
   @media screen and (max-width: 991px) {
     h1 {
       font-size: 1.8em;
       padding: 20px 10px; } }
-  @media screen and (max-width: 767px) {
-    h1 {
-      text-align: center; } }
 
 h3 {
   border-bottom: 1px solid #e0e0e0;
@@ -81,15 +79,19 @@ h3 {
   width: 100%; }
   .container.m_content {
     clear: both;
-    margin: 40px auto; }
+    margin: 60px auto; }
     @media screen and (min-width: 1200px) {
       .container.m_content {
         max-width: 100%;
         width: 80%; } }
     @media screen and (max-width: 1199px) {
       .container.m_content {
+        margin: 40px auto;
         padding-left: 20px;
         padding-right: 20px; } }
+    @media screen and (max-width: 767px) {
+      .container.m_content {
+        margin: 30px auto; } }
 
 nav.nav {
   background: #40809A;
@@ -105,11 +107,13 @@ nav.nav {
 
 .nav-wrapper-logo img {
   height: 40px;
+  margin-bottom: 6px;
   vertical-align: middle;
   width: auto; }
   @media screen and (max-width: 767px) {
     .nav-wrapper-logo img {
-      height: 20px; } }
+      height: 20px;
+      margin-bottom: 4px; } }
 
 .nav-wrapper-links > li > a {
   font-size: 1.1em;
@@ -123,12 +127,11 @@ nav.nav {
 .btn-group {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
-  @media screen and (max-width: 991px) {
-    .btn-group {
-      justify-content: center; } }
+  justify-content: center; }
   .btn-group.m_inline {
     justify-content: flex-start; }
+  .btn-group.m_spaced {
+    margin: 30px auto; }
   .btn-group .btn:not(:last-child) {
     margin-right: 8px; }
 
@@ -143,15 +146,23 @@ nav.nav {
 
 .btn-action {
   background: #109648; }
+  .btn-action:hover {
+    background: #095127; }
 
 .btn-neutral {
   background: #3b6064; }
+  .btn-neutral:hover {
+    background: #1f3234; }
 
 .btn-mute {
   background: #b3b3b3; }
+  .btn-mute:hover {
+    background: gray; }
 
 .btn-danger {
   background: #ac3931; }
+  .btn-danger:hover {
+    background: #702520; }
 
 .btn-back {
   display: table;
@@ -174,36 +185,56 @@ nav.nav {
       grid-template-columns: repeat(1, 100%); } }
 
 .exercises-box {
-  background: #fbb13c;
+  background: #ebebeb;
   border-radius: 3px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   padding: 20px 30px 50px 30px; }
+  @media screen and (max-width: 767px) {
+    .exercises-box {
+      padding: 30px; } }
 
 .exercises-box-type {
-  color: #fff;
+  color: #000;
   display: block;
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 3px;
   margin-bottom: 80px;
   text-transform: uppercase; }
+  @media screen and (max-width: 767px) {
+    .exercises-box-type {
+      font-size: .9em;
+      margin-bottom: 30px; } }
 
 .exercises-box-icon {
   display: block;
   height: 100px;
   margin-bottom: 30px;
   width: 100%; }
+  @media screen and (max-width: 767px) {
+    .exercises-box-icon {
+      height: 30px; } }
   .exercises-box-icon.m_strength {
     background: url("../../img/icon-strength.svg") no-repeat center top/auto 60px; }
+    @media screen and (max-width: 767px) {
+      .exercises-box-icon.m_strength {
+        background-size: auto 25px; } }
   .exercises-box-icon.m_cardio {
     background: url("../../img/icon-cardio.svg") no-repeat center top/auto 80px; }
+    @media screen and (max-width: 767px) {
+      .exercises-box-icon.m_cardio {
+        background-size: contain; } }
 
 .exercises-box-name {
   font-size: 2em;
   font-weight: 100;
   margin-bottom: 50px; }
+  @media screen and (max-width: 767px) {
+    .exercises-box-name {
+      font-size: 1.3em;
+      margin-bottom: 30px; } }
   .exercises-box-name a {
-    color: #fff; }
+    color: #000; }
 
 .set_title {
   margin-top: 50px; }
@@ -273,9 +304,51 @@ nav.nav {
 .set-details-quantity {
   margin-bottom: 20px; }
 
+.form_set {
+  margin: 40px 0; }
+
+.review-exercise {
+  margin-bottom: 20px; }
+
+.review-exercise-label,
+.review-set-number {
+  color: #40809A;
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-transform: uppercase; }
+
+.review-exercise-data {
+  margin-bottom: 20px; }
+
+.review-set {
+  margin-bottom: 20px; }
+  .review-set > p {
+    margin-bottom: 10px; }
+  .review-set strong {
+    font-weight: 600; }
+
+.review-set-number {
+  font-weight: 600; }
+
+@media screen and (min-width: 768px) {
+  .exercise-details {
+    display: flex;
+    justify-content: flex-start; } }
+
+@media screen and (min-width: 768px) {
+  .exercise-details-name {
+    margin-right: 30px; } }
+
 .exercise-details-name,
 .exercise-details-type {
   margin-bottom: 30px; }
+  @media screen and (min-width: 768px) {
+    .exercise-details-name,
+    .exercise-details-type {
+      width: 30%; } }
   .exercise-details-name span,
   .exercise-details-type span {
     color: #40809A;

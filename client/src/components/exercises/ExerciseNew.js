@@ -16,9 +16,15 @@ class ExerciseNew extends Component {
 
   render() {
     return (
-      <div>
-        {this.renderContent()}
-      </div>
+      <section>
+        <header>
+          <h1>New Exercise</h1>
+        </header>
+
+        <div className="container m_content">
+          {this.renderContent()}
+        </div>
+      </section>
     );
   }
 }

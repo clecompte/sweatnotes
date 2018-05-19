@@ -1,6 +1,23 @@
+.exercise-details {
+  @media screen and (min-width: $screen-sm-min) {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.exercise-details-name {
+  @media screen and (min-width: $screen-sm-min) {
+    margin-right: 30px;
+  }
+}
+
 .exercise-details-name,
 .exercise-details-type {
   margin-bottom: 30px;
+
+  @media screen and (min-width: $screen-sm-min) {
+    width: 30%;
+  }
 
   span {
     color: $color-blue;

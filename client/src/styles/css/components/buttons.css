@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$screen-sm-max".
-        on line 6 of src/styles/scss/components/buttons.scss
+Error: Undefined variable: "$screen-xs-max".
+        on line 23 of src/styles/scss/components/buttons.scss
 
-1: .btn-group {
-2:   display: flex;
-3:   flex-direction: row;
-4:   justify-content: space-between;
-5: 
-6:   @media screen and (max-width: $screen-sm-max) {
-7:     justify-content: center;
-8:   }
-9: 
-10:   &.m_inline {
-11:     justify-content: flex-start;
+18: 
+19: .btn {
+20:   box-shadow: none;
+21:   cursor: pointer !important;
+22: 
+23:   @media screen and (max-width: $screen-xs-max) {
+24:     font-size: .9em;
+25:     height: 32px;
+26:     line-height: 32px;
+27:   }
+28: }
 
 Backtrace:
-src/styles/scss/components/buttons.scss:6
+src/styles/scss/components/buttons.scss:23
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
@@ -73,4 +73,4 @@ src/styles/scss/components/buttons.scss:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$screen-sm-max\".\A         on line 6 of src/styles/scss/components/buttons.scss\A \A 1: .btn-group {\A 2:   display: flex;\A 3:   flex-direction: row;\A 4:   justify-content: space-between;\A 5: \A 6:   @media screen and (max-width: $screen-sm-max) {\A 7:     justify-content: center;\A 8:   }\A 9: \A 10:   &.m_inline {\A 11:     justify-content: flex-start;"; }
+  content: "Error: Undefined variable: \"$screen-xs-max\".\A         on line 23 of src/styles/scss/components/buttons.scss\A \A 18: \A 19: .btn {\A 20:   box-shadow: none;\A 21:   cursor: pointer !important;\A 22: \A 23:   @media screen and (max-width: $screen-xs-max) {\A 24:     font-size: .9em;\A 25:     height: 32px;\A 26:     line-height: 32px;\A 27:   }\A 28: }"; }

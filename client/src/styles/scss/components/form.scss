@@ -1,0 +1,38 @@
+.form_set {
+  margin: 40px 0;
+}
+
+.review-exercise {
+  margin-bottom: 20px;
+}
+
+.review-exercise-label,
+.review-set-number {
+  color: $color-blue;
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.review-exercise-data {
+  margin-bottom: 20px;
+}
+
+.review-set {
+  margin-bottom: 20px;
+
+  > p {
+    margin-bottom: 10px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.review-set-number {
+  font-weight: 600;
+}

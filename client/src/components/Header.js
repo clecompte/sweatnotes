@@ -18,9 +18,7 @@ class Header extends Component {
         return (
           <ul className="nav-wrapper-links">
             <li>
-              <Link to="/exercises/new">
-                Add Exercises
-              </Link>
+              <Link to="/exercises/new">Add Exercise</Link>
             </li>
             <li>
               <a href="/api/logout">Logout</a>

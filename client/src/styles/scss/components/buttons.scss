@@ -1,14 +1,14 @@
 .btn-group {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
-  @media screen and (max-width: $screen-sm-max) {
-    justify-content: center;
-  }
+  justify-content: center;
 
   &.m_inline {
     justify-content: flex-start;
+  }
+
+  &.m_spaced {
+    margin: 30px auto;
   }
   
   .btn:not(:last-child) {
@@ -29,18 +29,34 @@
 
 .btn-action {
   background: $color-green;
+
+  &:hover {
+    background: darken($color-green, 15%);
+  }
 }
 
 .btn-neutral {
   background: $color-blue-dark;
+
+  &:hover {
+    background: darken($color-blue-dark, 15%);
+  }
 }
 
 .btn-mute {
   background: $color-gray-60;
+
+  &:hover {
+    background: $color-gray-80;
+  }
 }
 
 .btn-danger {
   background: $color-red;
+
+  &:hover {
+    background: darken($color-red, 15%);
+  }
 }
 
 .btn-back {

@@ -3,19 +3,16 @@ body {
 }
 
 h1 {
-  background: $color-gray-20;
-  font-size: 3em;
+  box-shadow: 0 6px 8px $color-gray-30;
+  font-size: 2em;
   font-weight: 600;
   margin: 0;
-  padding: 50px 30px;
+  padding: 30px;
+  text-align: center;
 
   @media screen and (max-width: $screen-sm-max) {
     font-size: 1.8em;
     padding: 20px 10px;
-  }
-
-  @media screen and (max-width: $screen-xs-max) {
-    text-align: center;
   }
 }
 

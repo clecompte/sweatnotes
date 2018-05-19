@@ -15,20 +15,29 @@
 }
 
 .exercises-box {
-  background: $color-orange;
+  background: $color-gray-20;
   border-radius: 3px;
   box-shadow: 5px 5px 10px rgba(0,0,0,.2);
   padding: 20px 30px 50px 30px;
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding: 30px;
+  }
 }
 
 .exercises-box-type {
-  color: #fff;
+  color: #000;
   display: block;
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 3px;
   margin-bottom: 80px;
   text-transform: uppercase;
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: .9em;
+    margin-bottom: 30px;
+  }
 }
 
 .exercises-box-icon {
@@ -37,12 +46,24 @@
   margin-bottom: 30px;
   width: 100%;
 
+  @media screen and (max-width: $screen-xs-max) {
+    height: 30px;
+  }
+
   &.m_strength {
     background: url('../../img/icon-strength.svg') no-repeat center top / auto 60px;
+
+    @media screen and (max-width: $screen-xs-max) {
+      background-size: auto 25px;
+    }
   }
 
   &.m_cardio {
     background: url('../../img/icon-cardio.svg') no-repeat center top / auto 80px;
+
+    @media screen and (max-width: $screen-xs-max) {
+      background-size: contain;
+    }
   }
 }
 
@@ -51,7 +72,12 @@
   font-weight: 100;
   margin-bottom: 50px;
 
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+  }
+
   a {
-    color: #fff;
+    color: #000;
   }
 }

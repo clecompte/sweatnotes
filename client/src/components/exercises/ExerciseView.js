@@ -42,32 +42,31 @@ class ExerciseView extends Component {
                 <span>Exercise Type</span>
                 {this.state.showEditFields ? this.showField(exercise.exerciseType, 'newExerciseType') : exercise.exerciseType}
               </div>
-
-              <div className="btn-group m_inline">
-                {this.state.showEditFields &&
-                  <button
-                    className="btn btn-action"
-                    onClick={
-                      () => this.props.editExercise(
-                        exercise._id, (this.state.newExerciseTitle || exercise.exerciseName),
-                        (this.state.newExerciseType || exercise.exerciseType),
-                        () => {
-                          this.setState({ showEditFields: false });
-                          this.props.viewExercise(this.props.match.params.id);
-                        }
-                      )
-                    }
-                  >
-                    Update
-                  </button>
-                }
-                {!this.state.showEditFields &&
-                  <button className="btn btn-neutral" onClick={() => this.setState({ showEditFields: true })}>Edit</button>
-                }
-                <button className="btn btn-mute" onClick={() => this.setState({ showEditFields: false })}>Cancel</button>
-              </div>
             </div>
 
+            {this.state.showEditFields &&
+              <div className="btn-group m_inline">
+                <button
+                  className="btn btn-action"
+                  onClick={
+                    () => this.props.editExercise(
+                      exercise._id, (this.state.newExerciseTitle || exercise.exerciseName),
+                      (this.state.newExerciseType || exercise.exerciseType),
+                      () => {
+                        this.setState({ showEditFields: false });
+                        this.props.viewExercise(this.props.match.params.id);
+                      }
+                    )
+                  }
+                >
+                  Update
+                  </button>
+                <button className="btn btn-mute" onClick={() => this.setState({ showEditFields: false })}>Cancel</button>
+              </div>
+            }
+            {!this.state.showEditFields &&
+              <button className="btn btn-neutral" onClick={() => this.setState({ showEditFields: true })}>Edit</button>
+            }
 
             <SetList exercise={exercise} exerciseId={exerciseId} />
           </div>

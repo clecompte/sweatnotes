@@ -15,11 +15,13 @@ nav.nav {
 .nav-wrapper-logo {
   img {
     height: 40px;
+    margin-bottom: 6px;
     vertical-align: middle;
     width: auto;
 
     @media screen and (max-width: $screen-xs-max) {
       height: 20px;
+      margin-bottom: 4px;
     }
   }
 }

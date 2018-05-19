@@ -13,7 +13,9 @@ class ExercisesOverview extends Component {
       return (
         <div className="exercises-box" key={exercise._id}>
           <span className="exercises-box-type">{exercise.exerciseType}</span>
-          <span className={"exercises-box-icon m_" + exercise.exerciseType.toLowerCase()} ></span>
+          <Link to={`/exercise/${exercise._id}`}>
+            <span className={"exercises-box-icon m_" + exercise.exerciseType.toLowerCase()} ></span>
+          </Link>
           <h2 className="exercises-box-name">
             <Link to={`/exercise/${exercise._id}`}>{exercise.exerciseName}</Link>
           </h2>

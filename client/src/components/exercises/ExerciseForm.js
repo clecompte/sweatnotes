@@ -7,22 +7,20 @@ import { exerciseFields, setFields } from './formFields';
 
 const renderSets = ({ fields, meta: { touched, error } }) => (
   <div>
-    <button type="button" onClick={() => fields.push({})}>
+    <button className="btn btn-neutral" type="button" onClick={() => fields.push({})}>
       Add Set
     </button>
     {touched && error && <span>{error}</span>}
 
     {fields.map((set, index) => (
-      <div key={index}>
-        <button
-          type="button"
-          title="Remove Member"
-          onClick={() => fields.remove(index)}
-        />
-        <h4>Set #{index + 1}</h4>
+      <div key={index} className="form_set">
+        <h3>Set #{index + 1}</h3>
+
         {_.map(setFields, ({ label, name }) => {
           return <Field key={name} component={ExerciseField} type="text" label={label} name={`${set}.${name}`} />
         })}
+
+        <button className="btn btn-mute" type="button" onClick={() => fields.remove(index)}>Remove Set</button>
       </div>
     ))}
   </div>
@@ -41,13 +39,14 @@ class ExerciseForm extends Component {
         {this.renderFields()}
         <FieldArray name="sets" component={renderSets} />
 
-        <Link to="/exercises">
-          Cancel
-        </Link>
-
-        <button type="submit">
-          Next
-        </button>
+        <div className="btn-group m_spaced">
+          <button type="submit" className="btn btn-action">
+            Next
+          </button>
+          <Link to="/exercises" className="btn btn-danger">
+            Cancel
+          </Link>
+        </div>
       </form>
     );
   }

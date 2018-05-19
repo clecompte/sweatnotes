@@ -1,39 +1,24 @@
 /*
-Error: Undefined variable: "$screen-lg".
-        on line 10 of src/styles/scss/config/layout.scss
+Error: Undefined variable: "$color-blue".
+        on line 11 of src/styles/scss/components/form.scss
 
-5: 
-6:   &.m_content {
-7:     clear: both;
-8:     margin: 60px auto;
-9:     
-10:     @media screen and (min-width: $screen-lg) {
-11:       max-width: 100%;
-12:       width: 80%;
-13:     }
-14: 
-15:     @media screen and (max-width: $screen-md-max) {
+6:   margin-bottom: 20px;
+7: }
+8: 
+9: .review-exercise-label,
+10: .review-set-number {
+11:   color: $color-blue;
+12:   display: block;
+13:   font-size: 1em;
+14:   font-weight: 600;
+15:   letter-spacing: 3px;
+16:   margin-bottom: 10px;
 
 Backtrace:
-src/styles/scss/config/layout.scss:10
+src/styles/scss/components/form.scss:11
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:553:in `map'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:553:in `run_interp_no_strip'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:560:in `run_interp'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:525:in `visit_media'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/clecompte/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
@@ -84,4 +69,4 @@ src/styles/scss/config/layout.scss:10
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$screen-lg\".\A         on line 10 of src/styles/scss/config/layout.scss\A \A 5: \A 6:   &.m_content {\A 7:     clear: both;\A 8:     margin: 60px auto;\A 9:     \A 10:     @media screen and (min-width: $screen-lg) {\A 11:       max-width: 100%;\A 12:       width: 80%;\A 13:     }\A 14: \A 15:     @media screen and (max-width: $screen-md-max) {"; }
+  content: "Error: Undefined variable: \"$color-blue\".\A         on line 11 of src/styles/scss/components/form.scss\A \A 6:   margin-bottom: 20px;\A 7: }\A 8: \A 9: .review-exercise-label,\A 10: .review-set-number {\A 11:   color: $color-blue;\A 12:   display: block;\A 13:   font-size: 1em;\A 14:   font-weight: 600;\A 15:   letter-spacing: 3px;\A 16:   margin-bottom: 10px;"; }
