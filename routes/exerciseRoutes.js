@@ -26,10 +26,10 @@ module.exports = app => {
     let { exerciseName, exerciseType, quantityUnit, exertionUnit, sets } = req.body;
 
     const sortedSets = sets.sort((a, b) => {
-      if (a.quantity < b.quantity) {
+      if (a.quantity > b.quantity) {
         return -1;
       }
-      if (a.quantity > b.quantity) {
+      if (a.quantity < b.quantity) {
         return 1;
       }
     });

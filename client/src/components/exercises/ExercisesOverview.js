@@ -17,7 +17,7 @@ class ExercisesOverview extends Component {
           <h2 className="exercises-box-name">
             <Link to={`/exercise/${exercise._id}`}>{exercise.exerciseName}</Link>
           </h2>
-          <div class="btn-group">
+          <div className="btn-group">
             <button className="btn btn-neutral" onClick={() => this.props.duplicateExercise(exercise._id)}>Duplicate</button>
             <button className="btn btn-danger" onClick={() => this.props.deleteExercise(exercise._id)}>Delete</button>
           </div>

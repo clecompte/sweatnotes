@@ -15,10 +15,6 @@ class ExerciseView extends Component {
     this.props.viewExercise(this.props.match.params.id);
   }
 
-  componentDidUpdate() {
-    this.props.viewExercise(this.props.match.params.id);
-  }
-
   showField(field, updatedField) {
     return (
       <div>
@@ -55,7 +51,10 @@ class ExerciseView extends Component {
                       () => this.props.editExercise(
                         exercise._id, (this.state.newExerciseTitle || exercise.exerciseName),
                         (this.state.newExerciseType || exercise.exerciseType),
-                        () => this.setState({ showEditFields: false })
+                        () => {
+                          this.setState({ showEditFields: false });
+                          this.props.viewExercise(this.props.match.params.id);
+                        }
                       )
                     }
                   >
