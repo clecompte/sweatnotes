@@ -20,7 +20,8 @@
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
     "redux-form": "^7.3.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "immutability-helper": "^2.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,8 +29,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css"
-  },
-  "devDependencies": {
-    "immutability-helper": "^2.7.0"
   }
 }
