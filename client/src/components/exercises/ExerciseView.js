@@ -12,10 +12,12 @@ class ExerciseView extends Component {
     this.props.viewExercise(params.id);
   }
 
+
+
   showField(field) {
     return (
       <div>
-        <input value={field} />
+        <input defaultValue={field} />
       </div>
     )
   }
@@ -25,8 +27,8 @@ class ExerciseView extends Component {
 
     return getExercise.map((exercise, exerciseId) => {
       return (
-        <ul key={exercise._id}>
-          <h4>Exercise</h4>
+        <div key={exercise._id}>
+          <h1>{exercise.exerciseName}</h1>
           <button onClick={() => this.setState({ showEditFields: true })}>
             Edit
             </button>
@@ -43,7 +45,7 @@ class ExerciseView extends Component {
           }
           <h5><strong>Sets</strong></h5>
           <SetList exercise={exercise} exerciseId={exerciseId} />
-        </ul>
+        </div>
       );
     })
   }
@@ -51,7 +53,6 @@ class ExerciseView extends Component {
   render() {
     return (
       <div>
-        <h1>Exercise</h1>
         <Link to="/exercises">
           Go Back
         </Link>

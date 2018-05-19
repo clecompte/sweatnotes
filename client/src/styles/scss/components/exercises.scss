@@ -1,0 +1,49 @@
+.exercises {
+  display: grid;
+  grid-column-gap: 3%;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(3, 31%);
+  text-align: center;
+}
+
+.exercises-box {
+  background: #fbb13c;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+  padding: 20px 30px 50px 30px;
+}
+
+.exercises-box-type {
+  color: #fff;
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.exercises-box-icon {
+  display: block;
+  height: 100px;
+  margin-bottom: 30px;
+  width: 100%;
+
+  &.m_strength {
+    background: url('../../img/icon-strength.svg') no-repeat center top / auto 60px;
+  }
+
+  &.m_cardio {
+    background: url('../../img/icon-cardio.svg') no-repeat center top / auto 80px;
+  }
+}
+
+.exercises-box-name {
+  font-size: 2em;
+  font-weight: 100;
+  margin-bottom: 50px;
+
+  a {
+    color: #fff;
+  }
+}

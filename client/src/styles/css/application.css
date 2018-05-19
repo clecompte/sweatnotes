@@ -1,0 +1,147 @@
+@import url(../../../node_modules/materialize-css/dist/css/materialize.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  outline: 0;
+  outline: none; }
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; }
+
+h1 {
+  background: #ebebeb;
+  font-size: 3em;
+  font-weight: 600;
+  margin: 0;
+  padding: 50px 30px; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%; }
+  .container.m_content {
+    clear: both;
+    margin: 40px auto; }
+    @media screen and (min-width: 1200px) {
+      .container.m_content {
+        max-width: 100%;
+        width: 80%; } }
+
+nav.nav {
+  background: #40809A;
+  box-shadow: none;
+  height: auto;
+  line-height: auto; }
+
+.nav-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px; }
+
+.nav-wrapper-logo img {
+  height: 40px;
+  vertical-align: middle;
+  width: auto; }
+
+.nav-wrapper-links > li > a {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .btn-group .btn:not(:last-child) {
+    margin-right: 8px; }
+
+.btn-neutral {
+  background: #ccc; }
+
+.btn-danger {
+  background: red; }
+
+.exercises {
+  display: grid;
+  grid-column-gap: 3%;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(3, 31%);
+  text-align: center; }
+
+.exercises-box {
+  background: #fbb13c;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px 50px 30px; }
+
+.exercises-box-type {
+  color: #fff;
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 80px;
+  text-transform: uppercase; }
+
+.exercises-box-icon {
+  display: block;
+  height: 100px;
+  margin-bottom: 30px;
+  width: 100%; }
+  .exercises-box-icon.m_strength {
+    background: url("../../img/icon-strength.svg") no-repeat center top/auto 60px; }
+  .exercises-box-icon.m_cardio {
+    background: url("../../img/icon-cardio.svg") no-repeat center top/auto 80px; }
+
+.exercises-box-name {
+  font-size: 2em;
+  font-weight: 100;
+  margin-bottom: 50px; }
+  .exercises-box-name a {
+    color: #fff; }
+
+/*# sourceMappingURL=application.css.map */

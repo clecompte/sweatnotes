@@ -1,31 +1,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import logo from '../img/sweat-notes-logo.svg';
 
 class Header extends Component {
-  renderContent() {
+  reanderNav() {
     switch(this.props.auth) {
       case null:
         return;
       case false:
-        return <li><a href="/auth/google">Login with Google</a></li>;
+        return (
+          <ul className="nav-wrapper-links">
+            <li><a href="/auth/google">Login with Google</a></li>
+          </ul>
+        )
       default:
-        return <li><a href="/api/logout">Logout</a></li>;
+        return (
+          <ul className="nav-wrapper-links">
+            <li>
+              <Link to="/exercises/new">
+                Add Exercises
+              </Link>
+            </li>
+            <li>
+              <a href="/api/logout">Logout</a>
+            </li>
+          </ul>
+        )
     }
   }
 
   render() {
     return (
-      <nav>
+      <nav className="nav">
         <div className="nav-wrapper">
-          <Link
-            to={this.props.auth ? '/exercises' : '/'}
-          >
-            Sweat Notes
+          <Link to={this.props.auth ? '/exercises' : '/'} className="nav-wrapper-logo">
+            <img src={logo} alt="Sweat Notes" />
           </Link>
-          <ul className="right">
-            {this.renderContent()}
-          </ul>
+          {this.reanderNav()}
         </div>
       </nav>
     );

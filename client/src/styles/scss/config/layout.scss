@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+
+  &.m_content {
+    clear: both;
+    margin: 40px auto;
+    
+    @media screen and (min-width: $screen-lg) {
+      max-width: 100%;
+      width: 80%;
+    }
+  }
+}

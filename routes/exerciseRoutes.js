@@ -6,6 +6,7 @@ module.exports = app => {
   app.get('/api/exercises', requireLogin, async (req, res) => {
     try {
       let exercises = await Exercise.find({ _user: req.user.id });
+
       res.send(exercises);
     } catch (err) {
       res.status(422).send(err);
@@ -24,13 +25,22 @@ module.exports = app => {
   app.post('/api/exercises', async (req, res) => {
     let { exerciseName, exerciseType, quantityUnit, exertionUnit, sets } = req.body;
 
+    const sortedSets = sets.sort((a, b) => {
+      if (a.quantity < b.quantity) {
+        return -1;
+      }
+      if (a.quantity > b.quantity) {
+        return 1;
+      }
+    });
+
     try {
       let exercise = new Exercise({
         exerciseName,
         exerciseType,
         quantityUnit,
         exertionUnit,
-        sets: sets.map(set => ({ quantity: set.quantity, exertion: set.exertion })),
+        sets: sortedSets.map(set => ({ quantity: set.quantity, exertion: set.exertion })),
         _user: req.user.id,
         dateModified: Date.now()
       });
@@ -40,6 +50,7 @@ module.exports = app => {
       res.send(user);
     } catch(err) {
       res.status(422).send(err);
+      console.log(err);
     }
   });
 

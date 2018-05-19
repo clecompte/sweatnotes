@@ -1,0 +1,13 @@
+$blue: #40809A;
+$orange: #DEBE9B;
+
+$color-gray-base      : #ccc;
+$color-gray-10        : lighten($color-gray-base, 16%);
+$color-gray-20        : lighten($color-gray-base, 12%);
+$color-gray-30        : lighten($color-gray-base, 8%);
+$color-gray-40        : lighten($color-gray-base, 4%);
+$color-gray-50        : $color-gray-base;
+$color-gray-60        : darken($color-gray-base, 10%);
+$color-gray-70        : darken($color-gray-base, 20%);
+$color-gray-80        : darken($color-gray-base, 30%);
+$color-gray-90        : darken($color-gray-base, 40%);

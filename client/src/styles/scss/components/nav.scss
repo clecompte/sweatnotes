@@ -1,0 +1,30 @@
+nav.nav {
+  background: $blue;
+  box-shadow: none;
+  height: auto;
+  line-height: auto;
+}
+
+.nav-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav-wrapper-logo {
+
+  img {
+    height: 40px;
+    vertical-align: middle;
+    width: auto;
+  }
+}
+
+.nav-wrapper-links {
+  & > li > a {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}

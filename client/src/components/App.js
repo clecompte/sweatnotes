@@ -17,18 +17,16 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <BrowserRouter>
-          <div className="container">
-            <Header />
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/exercises" component={ExercisesOverview} />
-            <Route path="/exercises/new" component={ExerciseNew} />
-            <Route exact path="/exercises/all" component={ExercisesAll} />
-            <Route exact path="/exercise/:id" component={ExerciseView} />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/exercises" component={ExercisesOverview} />
+          <Route path="/exercises/new" component={ExerciseNew} />
+          <Route exact path="/exercises/all" component={ExercisesAll} />
+          <Route exact path="/exercise/:id" component={ExerciseView} />
+        </div>
+      </BrowserRouter>
     );
   }
 };

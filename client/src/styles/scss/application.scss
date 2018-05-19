@@ -1,0 +1,14 @@
+@import '../../../node_modules/materialize-css/dist/css/materialize.min.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+@import 'config/reset';
+@import 'config/breakpoints';
+@import 'config/colors';
+@import 'config/typography';
+@import 'config/layout';
+
+@import 'components/nav';
+@import 'components/buttons';
+@import 'components/exercises';
+
+@import 'pages/home';

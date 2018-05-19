@@ -11,34 +11,34 @@ class ExercisesOverview extends Component {
   renderExercises() {
     return this.props.exercises.map((exercise, exerciseId) => {
       return (
-        <ul key={exercise._id}>
-          <h4>Exercise</h4>
-          <button onClick={() => this.props.duplicateExercise(exercise._id)}>Duplicate</button>
-          <button onClick={() => this.props.deleteExercise(exercise._id)}>Delete</button>
-          <li>
-            <Link to={`/exercise/${exercise._id}`}>
-              Exercise Name: {exercise.exerciseName}
-            </Link>
-          </li>
-          <li>Exercise Type: {exercise.exerciseType}</li>
-        </ul>
+        <div className="exercises-box" key={exercise._id}>
+          <span className="exercises-box-type">{exercise.exerciseType}</span>
+          <span className={"exercises-box-icon m_" + exercise.exerciseType.toLowerCase()} ></span>
+          <h2 className="exercises-box-name">
+            <Link to={`/exercise/${exercise._id}`}>{exercise.exerciseName}</Link>
+          </h2>
+          <div class="btn-group">
+            <button className="btn btn-neutral" onClick={() => this.props.duplicateExercise(exercise._id)}>Duplicate</button>
+            <button className="btn btn-danger" onClick={() => this.props.deleteExercise(exercise._id)}>Delete</button>
+          </div>
+        </div>
       );
     })
   }
 
   render() {
     return (
-      <div>
-        <h1>Exercises</h1>
-        <Link to="/exercises/new">
-          Add Exercises
-        </Link>
-        <span> | </span>
-        <Link to="/exercises/all">
-          Expand Exercises
-        </Link>
-        {this.renderExercises()}
-      </div>
+      <section>
+        <header>
+          <h1>Exercises</h1>
+        </header>
+
+        <section className="container m_content">
+          <div className="exercises">
+            {this.renderExercises()}
+          </div>
+        </section>
+      </section>
     )
   }
 }

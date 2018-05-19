@@ -1,0 +1,17 @@
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  .btn:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.btn-neutral {
+  background: $color-gray-50;
+}
+
+.btn-danger {
+  background: red;
+}
