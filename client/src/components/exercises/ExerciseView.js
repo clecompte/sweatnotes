@@ -1,29 +1,36 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { viewExercise } from '../../actions';
+import { viewExercise, editExercise } from '../../actions';
 import SetList from './SetList';
 
 class ExerciseView extends Component {
-  state = { showEditFields: false };
+  state = {
+    showEditFields: false,
+    newExerciseTitle: "",
+    newExerciseType: ""
+  };
   
   componentDidMount() {
-    const { match: { params } } = this.props;
-    this.props.viewExercise(params.id);
+    this.props.viewExercise(this.props.match.params.id);
   }
 
+  componentDidUpdate() {
+    this.props.viewExercise(this.props.match.params.id);
+  }
 
-
-  showField(field) {
+  showField(field, updatedField) {
     return (
       <div>
-        <input defaultValue={field} />
+        <input defaultValue={field} onChange={event => this.setState({ [updatedField]: event.target.value }) } />
       </div>
     )
   }
 
   renderExercise() {
     const getExercise = this.props.exercises.filter(exercise => exercise._id === this.props.match.params.id);
+
+    console.log(getExercise);
 
     return getExercise.map((exercise, exerciseId) => {
       return (
@@ -33,14 +40,20 @@ class ExerciseView extends Component {
             Edit
             </button>
           <li>
-            Exercise Name: {this.state.showEditFields ? this.showField(exercise.exerciseName) : exercise.exerciseName}
+            Exercise Name: {this.state.showEditFields ? this.showField(exercise.exerciseName, 'newExerciseTitle') : exercise.exerciseName}
           </li>
           <li>
-            Exercise Type: {this.state.showEditFields ? this.showField(exercise.exerciseType) : exercise.exerciseType}
+            Exercise Type: {this.state.showEditFields ? this.showField(exercise.exerciseType, 'newExerciseType') : exercise.exerciseType}
           </li>
           {this.state.showEditFields &&
-            <button>
-              test
+            <button onClick={
+              () => this.props.editExercise(
+                exercise._id, (this.state.newExerciseTitle || exercise.exerciseName),
+                (this.state.newExerciseType || exercise.exerciseType),
+                () => this.setState({ showEditFields: false })
+              )
+            }>
+              Update
             </button>
           }
           <h5><strong>Sets</strong></h5>
@@ -66,4 +79,4 @@ function mapStateToProps({ exercises }) {
   return { exercises };
 }
 
-export default connect(mapStateToProps, { viewExercise })(ExerciseView);
+export default connect(mapStateToProps, { viewExercise, editExercise })(ExerciseView);

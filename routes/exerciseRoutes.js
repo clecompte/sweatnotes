@@ -67,7 +67,8 @@ module.exports = app => {
         {
           $inc: { 'sets.$.exertion': change }
         },
-        { new: true });
+        { new: true }
+      );
 
       res.send(updatedExercise);
     } catch (err) {
@@ -95,4 +96,24 @@ module.exports = app => {
       res.status(422).send(err);
     }
   });
+
+  app.put('/api/exercises/:id', async (req, res) => {
+    let { newExerciseTitle, newExerciseType } = req.body;
+
+    try {
+      let exercise = await Exercise.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          $set: {
+            'exerciseName': newExerciseTitle,
+            'exerciseType': newExerciseType
+          }
+        }
+      );
+
+      res.send(exercise);
+    } catch (err) {
+      res.status(422).send(err);
+    }
+  })
 }
