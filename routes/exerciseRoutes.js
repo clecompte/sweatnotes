@@ -13,7 +13,7 @@ module.exports = app => {
     }
   });
 
-  app.get('/api/exercise/:id', async (req, res) => {
+  app.get('/api/exercise/:id', requireLogin, async (req, res) => {
     try {
       let exercise = await Exercise.find({ _id: req.params.id });
       res.send(exercise);
@@ -22,7 +22,7 @@ module.exports = app => {
     }
   });
 
-  app.post('/api/exercises', async (req, res) => {
+  app.post('/api/exercises', requireLogin, async (req, res) => {
     let { exerciseName, exerciseType, quantityUnit, exertionUnit, sets } = req.body;
 
     const sortedSets = sets.sort((b, a) => {
@@ -54,7 +54,7 @@ module.exports = app => {
     }
   });
 
-  app.put('/api/exercises', async (req, res) => {
+  app.put('/api/exercises', requireLogin, async (req, res) => {
     let { direction, exercise, set } = req.body;
     let change = (direction === 'increase' ? 2.5 : -2.5);
 
@@ -76,7 +76,7 @@ module.exports = app => {
     }
   });
 
-  app.delete('/api/exercises/:id', async (req, res) => {
+  app.delete('/api/exercises/:id', requireLogin, async (req, res) => {
     try {
       let exercise = await Exercise.findOneAndRemove({ _id: req.params.id });
       res.send(exercise);
@@ -85,7 +85,7 @@ module.exports = app => {
     }
   });
 
-  app.post('/api/exercises/duplicate/:id', async (req, res) => {
+  app.post('/api/exercises/duplicate/:id', requireLogin, async (req, res) => {
     try {
       let exercise = await Exercise.findOne({ _id: req.params.id });
       exercise._id = mongoose.Types.ObjectId();
@@ -97,7 +97,7 @@ module.exports = app => {
     }
   });
 
-  app.put('/api/exercises/:id', async (req, res) => {
+  app.put('/api/exercises/:id', requireLogin, async (req, res) => {
     let { newExerciseTitle, newExerciseType } = req.body;
 
     try {
