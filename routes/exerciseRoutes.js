@@ -115,5 +115,33 @@ module.exports = app => {
     } catch (err) {
       res.status(422).send(err);
     }
-  })
+  });
+
+  app.put('/api/exercises/set/:id', requireLogin, async (req, res) => {
+    let { newSetQuantity, newSetExertion } = req.body;
+
+    try {
+      let updatedExercise = await Exercise.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          $push: {
+            sets: {
+              $each: [{
+                quantity: newSetQuantity,
+                exertion: newSetExertion
+              }],
+              $sort: {
+                quantity: -1
+              }
+            }
+          },
+        },
+        { new: true }
+      );
+
+      res.send(updatedExercise);
+    } catch (err) {
+      res.status(422).send(err);
+    }
+  });
 }

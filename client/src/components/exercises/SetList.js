@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateSet } from '../../actions';
+import { updateSet, addSet } from '../../actions';
 
 class SetList extends Component {
+  state = {
+    showAddSetForm: false,
+    addSetQuantity: '',
+    addSetExertion: ''
+  };
+
   render() {
     const exercise = this.props.exercise.sets;
 
@@ -19,7 +25,43 @@ class SetList extends Component {
             <button className="set-decrease" onClick={() => this.props.updateSet('decrease', this.props.exercise, set, this.props.exerciseId, setId)}>Decrease</button>
           </div>
         ))}
+
+
+        {this.state.showAddSetForm &&
+          <div>
+            <form>
+              <label>Quantity <small>(e.g. Number of Reps)</small></label>
+              <input name="quantity" onChange={event => this.setState({ addSetQuantity: event.target.value })} />
+            <label>Exertion <small>(e.g. Pounds of Weight)</small></label>
+              <input name="exertion" onChange={event => this.setState({ addSetExertion: event.target.value })} />
+            </form>
+            <div className="btn-group m_inline">
+              <button
+                className="btn btn-action"
+                onClick={
+                  () => this.props.addSet(
+                    this.props.exercise._id,
+                    this.state.addSetQuantity,
+                    this.state.addSetExertion,
+                    () => {
+                      this.setState({ showAddSetForm: false });
+                    }
+                  )
+                }
+              >
+                Add
+            </button>
+              <button className="btn btn-mute" onClick={() => this.setState({ showAddSetForm: false })}>Cancel</button>
+            </div>
+          </div>
+        }
+        {!this.state.showAddSetForm &&
+          <div className="btn-group">
+            <button className="btn btn-action" onClick={() => this.setState({ showAddSetForm: true })}>Add Set</button>
+          </div>
+        }
       </div>
+
     )
   }
 }
@@ -28,4 +70,4 @@ function mapStateToProps(state) {
   return { updateSet: state.updateSet };
 }
 
-export default connect(mapStateToProps, { updateSet })(SetList);
+export default connect(mapStateToProps, { updateSet, addSet })(SetList);

@@ -36,3 +36,10 @@
 .review-set-number {
   font-weight: 600;
 }
+
+label {
+  small {
+    color: $color-gray-50;
+    font-size: .8em;
+  }
+}

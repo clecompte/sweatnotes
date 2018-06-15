@@ -3,32 +3,17 @@ import React, { Component } from 'react';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Link } from 'react-router-dom';
 import ExerciseField from './ExerciseField';
-import { exerciseFields, setFields } from './formFields';
+import { exerciseFields } from './formFields';
+import { renderSets } from './renderSets';
 
-const renderSets = ({ fields, meta: { touched, error } }) => (
-  <div>
-    {touched && error && <span>{error}</span>}
-
-    {fields.map((set, index) => (
-      <div key={index} className="form_set">
-        <h3>Set #{index + 1}</h3>
-
-        {_.map(setFields, ({ label, name }) => {
-          return <Field key={name} component={ExerciseField} type="text" label={label} name={`${set}.${name}`} />
-        })}
-
-        <button className="btn btn-mute" type="button" onClick={() => fields.remove(index)}>Remove Set</button>
-      </div>
-    ))}
-
-    <button className="btn btn-neutral" type="button" onClick={() => fields.push({})}>Add Set</button>
-  </div>
-);
+const fieldLabel = (label, example) => {
+  return <label>{label} <small>{example}</small></label>
+}
 
 class ExerciseForm extends Component {
   renderFields() {
-    return _.map(exerciseFields, ({ label, name }) => {
-      return <Field key={name} component={ExerciseField} type="text" label={label} name={name} />;
+    return _.map(exerciseFields, ({ label, name, example }) => {
+      return <Field key={name} component={ExerciseField} type="text" label={fieldLabel(label, example)} name={name} />;
     });
   }
 

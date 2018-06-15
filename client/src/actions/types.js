@@ -5,3 +5,4 @@ export const UPDATE_EXERCISE = 'update_exercise';
 export const DELETE_EXERCISE = 'delete_exercise';
 export const DUPLICATE_EXERCISE = 'duplicate_exercise';
 export const EDIT_EXERCISE = 'edit_exercise';
+export const ADD_SET = 'add_set';

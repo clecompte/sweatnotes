@@ -52,7 +52,8 @@ class ExerciseView extends Component {
                   className="btn btn-action"
                   onClick={
                     () => this.props.editExercise(
-                      exercise._id, (this.state.newExerciseTitle || exercise.exerciseName),
+                      exercise._id,
+                      (this.state.newExerciseTitle || exercise.exerciseName),
                       (this.state.newExerciseType || exercise.exerciseType),
                       () => {
                         this.setState({ showEditFields: false });

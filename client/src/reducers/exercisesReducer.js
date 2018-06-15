@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import update from 'immutability-helper';
-import { FETCH_EXERCISES, UPDATE_EXERCISE, DELETE_EXERCISE, DUPLICATE_EXERCISE, VIEW_EXERCISE, EDIT_EXERCISE } from '../actions/types';
+import { FETCH_EXERCISES, UPDATE_EXERCISE, DELETE_EXERCISE, DUPLICATE_EXERCISE, VIEW_EXERCISE, EDIT_EXERCISE, ADD_SET } from '../actions/types';
 
 export default function(state = [], action) {
   switch (action.type) {
@@ -28,6 +28,8 @@ export default function(state = [], action) {
     case VIEW_EXERCISE:
       return action.payload;
     case EDIT_EXERCISE:
+      return [action.payload];
+    case ADD_SET:
       return [action.payload];
     default:
       return state;

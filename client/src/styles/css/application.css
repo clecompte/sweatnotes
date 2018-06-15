@@ -351,6 +351,10 @@ nav.nav {
 .review-set-number {
   font-weight: 600; }
 
+label small {
+  color: #ccc;
+  font-size: .8em; }
+
 .footer {
   border-top: 1px solid #ebebeb;
   color: #999999;
