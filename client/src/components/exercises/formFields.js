@@ -1,6 +1,6 @@
 export const exerciseFields = [
-  { label: "Exercise Name", name: "exerciseName" },
-  { label: "Exercise Type", name: "exerciseType" },
+  { label: "Exercise Name", name: "exerciseName", example: "(e.g. Squats)" },
+  { label: "Exercise Type", name: "exerciseType", example: "(e.g. Strength or Cardio)" },
   { label: "Quantity Unit", name: "quantityUnit", example: "(e.g. Reps)" },
   { label: "Exertion Unit", name: "exertionUnit", example: "(e.g. Pounds)" }
 ];

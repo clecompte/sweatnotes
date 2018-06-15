@@ -25,7 +25,9 @@ module.exports = app => {
   app.post('/api/exercises', requireLogin, async (req, res) => {
     let { exerciseName, exerciseType, quantityUnit, exertionUnit, sets } = req.body;
 
-    const sortedSets = sets.sort((b, a) => {
+    const convertedSets = sets.map(obj => ({ quantity: Number(obj.quantity), exertion: Number(obj.exertion) }));
+
+    const sortedSets = convertedSets.sort((b, a) => {
       if (a.quantity < b.quantity) {
         return -1;
       }
@@ -50,7 +52,6 @@ module.exports = app => {
       res.send(user);
     } catch(err) {
       res.status(422).send(err);
-      console.log(err);
     }
   });
 
